@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Trabajos - Felix Maldonado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .page-header {
+            padding: 150px 0 50px;
+            text-align: center;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .portfolio-item {
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 4/3;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            cursor: pointer;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        .portfolio-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        .portfolio-overlay h4 {
+            color: var(--text-primary);
+            font-size: 22px;
+            margin-bottom: 5px;
+            transform: translateY(20px);
+            transition: transform var(--transition-normal);
+        }
+        .portfolio-overlay p {
+            color: var(--accent-color);
+            font-size: 14px;
+            transform: translateY(20px);
+            transition: transform var(--transition-normal) 0.1s;
+        }
+        .portfolio-item:hover .portfolio-overlay h4,
+        .portfolio-item:hover .portfolio-overlay p {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Decoración de fondo dinámica -->
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Navegación Sticky con Glassmorphism -->
+    <header class="glass-header">
+        <div class="contenedor header-content">
+            <div class="logo">
+                <a href="index.html">Felix<span>M.</span></a>
+            </div>
+            <nav>
+                <ul class="navegacion">
+                    <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="mistrabajos.html" style="color: var(--accent-color);">Mis Trabajos</a></li>
+                    <li><a href="index.html#contacto" class="btn-primary btn-small">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="page-header">
+            <h1 class="title">Mis <span>Trabajos</span></h1>
+            <p class="description" style="margin: 0 auto;">Explora una selección de mis proyectos más recientes y destacados.</p>
+        </section>
+
+        <section class="section pt-0" style="padding-top: 0; padding-bottom: 100px;">
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item glass-card">
+                    <!-- Usando placeholder de imagen en caso de no tener la real -->
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Proyecto 1">
+                    <div class="portfolio-overlay">
+                        <h4>Dashboard Analítico</h4>
+                        <p>Diseño UI / React</p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item glass-card">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Proyecto 2">
+                    <div class="portfolio-overlay">
+                        <h4>E-Commerce Moda</h4>
+                        <p>Desarrollo Web / WordPress</p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item glass-card">
+                    <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Proyecto 3">
+                    <div class="portfolio-overlay">
+                        <h4>App Móvil Financiera</h4>
+                        <p>UI/UX / Figma</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contenedor">
+            <p>&copy; 2026 Felix Maldonado. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

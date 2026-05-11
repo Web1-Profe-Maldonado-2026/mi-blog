@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Felix Maldonado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        /* Estilos específicos para esta página respetando el sistema premium */
+        .page-header {
+            padding: 150px 0 50px;
+            text-align: center;
+        }
+        .color-panel {
+            margin-bottom: 30px;
+            border-left: 4px solid transparent;
+        }
+        .panel-rojo {
+            border-left-color: #ef4444;
+            background: linear-gradient(90deg, rgba(239, 68, 68, 0.1) 0%, rgba(30, 41, 59, 0.4) 100%);
+        }
+        .panel-azul {
+            border-left-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .panel-verde {
+            border-left-color: #22c55e;
+            background: linear-gradient(90deg, rgba(34, 197, 94, 0.1) 0%, rgba(30, 41, 59, 0.4) 100%);
+        }
+        .cat-image {
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            margin: 20px 0;
+            border: 1px solid var(--glass-border);
+        }
+    </style>
+</head>
+<body>
+    <!-- Decoración de fondo dinámica -->
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Navegación Sticky con Glassmorphism -->
+    <header class="glass-header">
+        <div class="contenedor header-content">
+            <div class="logo">
+                <a href="index.html">Felix<span>M.</span></a>
+            </div>
+            <nav>
+                <ul class="navegacion">
+                    <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="mistrabajos.html">Mis Trabajos</a></li>
+                    <li><a href="index.html#contacto" class="btn-primary btn-small">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="page-header">
+            <h1 class="title">Bienvenidos a <span>Nosotros</span></h1>
+            <p class="description" style="margin: 0 auto;">Conoce más sobre nuestro equipo y nuestra historia.</p>
+        </section>
+
+        <section class="section pt-0" style="padding-top: 0;">
+            <!-- Contenedor Rojo adaptado a Dark Mode Premium -->
+            <div class="glass-panel color-panel panel-rojo">
+                <h2 style="font-size: 28px; margin-bottom: 15px; color: #f8fafc;">Título en contenedor <span style="color: #ef4444;">rojo</span></h2>
+                
+                <div class="panel-azul">
+                    <p style="color: #93c5fd;">Este es un párrafo dentro de un contenedor con fondo azul suave, que a su vez está dentro del contenedor principal rojo. Se ha modernizado para mantener el contraste y la legibilidad en el entorno oscuro.</p>
+                </div>
+            </div>
+
+            <!-- Contenedor Verde adaptado a Dark Mode Premium -->
+            <div class="glass-panel color-panel panel-verde">
+                <h2 style="font-size: 24px; margin-bottom: 15px; color: #f8fafc;">Subtítulo en contenedor <span style="color: #22c55e;">verde</span></h2>
+                
+                <img src="gatito.jpg" alt="Un lindo gatito" class="cat-image" width="250" height="180" onerror="this.src='https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&h=180&q=80'" />
+                
+                <p class="ultimo" style="color: #86efac; margin-top: 15px;">Este es otro párrafo que está dentro de un contenedor div con detalles en verde. (Si la imagen local 'gatito.jpg' no existe, se cargará una imagen de reemplazo automáticamente).</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contenedor">
+            <p>&copy; 2026 Felix Maldonado. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
